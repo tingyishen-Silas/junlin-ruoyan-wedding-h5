@@ -111,13 +111,14 @@
     .ceremony-sentence { margin:9px 0 3px; color:#6f5426; font-size:15px; font-weight:650; letter-spacing:.04em; text-align:center; }
     .ceremony-hero h3 { margin:0 0 20px; font-family:var(--serif); font-size:clamp(25px,7.5vw,34px); font-weight:600; text-align:center; }
     .countdown-label { margin:0 0 9px 2px; color:#76591f; font-size:14px; font-weight:750; letter-spacing:.05em; }
-    .countdown { display:grid; grid-template-columns:repeat(4,1fr); gap:7px; perspective:900px; }
-    .countdown div { position:relative; overflow:hidden; padding:15px 2px 11px; border:1px solid rgba(255,255,255,.45); border-radius:13px; color:#fffaf0; text-align:center; background:linear-gradient(180deg,#bb8a35 0 49%,#9a6c21 50% 100%); box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 8px 18px rgba(107,71,17,.16); transform-style:preserve-3d; }
-    .countdown div::after { content:""; position:absolute; left:0; right:0; top:50%; height:1px; background:rgba(76,46,7,.35); box-shadow:0 1px rgba(255,255,255,.12); }
-    .countdown div.flip { animation:flipCard .52s cubic-bezier(.35,.03,.26,1); }
-    @keyframes flipCard { 0%{transform:rotateX(0)} 46%{transform:rotateX(-84deg)} 54%{transform:rotateX(74deg)} 100%{transform:rotateX(0)} }
-    .countdown strong { position:relative; z-index:1; display:block; font-family:var(--serif); font-size:28px; font-weight:550; line-height:1; font-variant-numeric:tabular-nums; text-shadow:0 1px 1px rgba(65,39,5,.3); }
-    .countdown span { position:relative; z-index:1; color:rgba(255,255,255,.76); font-size:10px; }
+    .countdown { display:grid; grid-template-columns:repeat(4,1fr); padding:14px 6px 12px; border:1px solid rgba(151,105,29,.24); border-radius:17px; background:rgba(255,252,242,.62); box-shadow:inset 0 1px 0 rgba(255,255,255,.72),0 9px 24px rgba(116,78,18,.08); }
+    .countdown div { position:relative; min-width:0; text-align:center; }
+    .countdown div+div::before { content:""; position:absolute; left:0; top:5px; bottom:5px; width:1px; background:linear-gradient(transparent,rgba(151,105,29,.28),transparent); }
+    .countdown strong { display:block; color:#9d6f20; font-family:var(--serif); font-size:28px; font-weight:600; line-height:1.05; font-variant-numeric:tabular-nums; }
+    .countdown strong.tick { animation:countTick .38s ease-out; }
+    @keyframes countTick { 0%{opacity:.3;transform:translateY(-5px)} 100%{opacity:1;transform:translateY(0)} }
+    .countdown span { display:block; margin-top:6px; color:#806638; font-size:10px; letter-spacing:.08em; }
+    @media (prefers-reduced-motion:reduce) { .countdown strong.tick { animation:none; } }
     .arrival-note { position:relative; z-index:1; margin:12px 4px 0; color:#6f5426; font-family:var(--serif); font-size:11px; font-style:italic; text-align:right; }
     .event-list { position:relative; margin:28px 0 0; padding:0; list-style:none; }
     .event-list::before { content:""; position:absolute; left:65px; top:10px; bottom:22px; width:1px; background:linear-gradient(var(--gold),rgba(201,155,61,.1)); }
@@ -249,7 +250,7 @@
     document.querySelectorAll('[data-open],[data-nav]').forEach(b=>b.addEventListener('click',()=>showView(b.dataset.open||b.dataset.nav)));document.querySelectorAll('[data-back]').forEach(b=>b.addEventListener('click',()=>showView('home')));window.addEventListener('popstate',()=>showView(location.hash.slice(1)||'home',false));
     function bindTabs(selector,panelAttr,key){document.querySelectorAll(selector).forEach(button=>button.addEventListener('click',()=>{button.parentElement.querySelectorAll('button').forEach(item=>item.classList.toggle('active',item===button));document.querySelectorAll(`[${panelAttr}]`).forEach(panel=>panel.classList.toggle('active',panel.getAttribute(panelAttr)===button.dataset[key]))}))}
     bindTabs('[data-route-tab]','data-route-panel','routeTab');bindTabs('[data-transport-tab]','data-transport-panel','transportTab');bindTabs('[data-schedule-tab]','data-schedule-panel','scheduleTab');
-    function setClockValue(selector,value){const el=document.querySelector(selector);if(el.textContent===value)return;const card=el.parentElement;el.textContent=value;card.classList.remove('flip');void card.offsetWidth;card.classList.add('flip');setTimeout(()=>card.classList.remove('flip'),540)}
+    function setClockValue(selector,value){const el=document.querySelector(selector);if(el.textContent===value)return;el.textContent=value;el.classList.remove('tick');void el.offsetWidth;el.classList.add('tick');setTimeout(()=>el.classList.remove('tick'),400)}
     function updateCountdown(){const diff=Math.max(0,weddingDate.getTime()-Date.now()),pad=v=>String(v).padStart(2,'0');setClockValue('#days',String(Math.floor(diff/86400000)).padStart(3,'0'));setClockValue('#hours',pad(Math.floor(diff/3600000)%24));setClockValue('#minutes',pad(Math.floor(diff/60000)%60));setClockValue('#seconds',pad(Math.floor(diff/1000)%60))}updateCountdown();setInterval(updateCountdown,1000);
     let toastTimer;function toast(message){const el=document.querySelector('#toast');el.textContent=message;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),1900)}
     document.querySelector('#copyAddress').addEventListener('click',async()=>{try{await navigator.clipboard.writeText('上海市浦东新区申迪西路1009号 上海迪士尼乐园酒店');toast('地址已复制')}catch{toast('请长按地址复制')}});
