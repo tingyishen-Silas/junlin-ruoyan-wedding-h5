@@ -8,9 +8,9 @@
   <title>乐骏霖 & 张若妍｜婚礼指南</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='17' fill='%23173d7a'/%3E%3Cpath d='M16 41h32v5H16zm5-3h22l-2-15-7 6-3-13-4 13-7-6z' fill='%23f2cf73'/%3E%3Ccircle cx='19' cy='20' r='3' fill='%23fff'/%3E%3Ccircle cx='45' cy='17' r='2' fill='%23fff'/%3E%3C/svg%3E" />
   <style>
-    :root { --blue-950:#0d2855; --blue-900:#153a75; --blue-700:#2b67b5; --blue-100:#eaf4ff; --sky:#f4f9ff; --gold:#c99b3d; --gold-soft:#f4df9f; --ink:#1e3354; --muted:#6a7890; --line:rgba(43,103,181,.14); --shadow:0 18px 50px rgba(19,55,109,.12); --serif:"Songti SC","STSong","Noto Serif CJK SC",Georgia,serif; --sans:Inter,"PingFang SC","Microsoft YaHei",sans-serif; }
+    :root { --blue-950:#10284f; --blue-900:#183b70; --blue-700:#3568a8; --blue-100:#edf3fb; --sky:#fffaf0; --gold:#aa7c2b; --gold-deep:#79541a; --gold-soft:#f3dda4; --champagne:#ead09a; --ink:#29334a; --muted:#766f62; --line:rgba(158,113,35,.2); --shadow:0 18px 50px rgba(103,72,24,.13); --serif:"Songti SC","STSong","Noto Serif CJK SC",Georgia,serif; --sans:Inter,"PingFang SC","Microsoft YaHei",sans-serif; }
     * { box-sizing:border-box; }
-    html { min-width:320px; background:#dfeeff; scroll-behavior:smooth; }
+    html { min-width:320px; background:#e9ddc5; scroll-behavior:smooth; }
     body { margin:0; color:var(--ink); background:var(--sky); font-family:var(--sans); font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased; }
     button,a { -webkit-tap-highlight-color:transparent; }
     button { color:inherit; font:inherit; }
@@ -25,25 +25,36 @@
     .home-hero::after { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(180deg,rgba(8,25,57,.06),rgba(9,30,70,.16) 33%,rgba(8,32,74,.93) 52%,rgba(8,32,74,.99) 70%,#0d326e 100%); }
     .hero-top { display:flex; align-items:center; justify-content:space-between; }
     .monogram { width:44px; height:44px; border:1px solid rgba(255,255,255,.65); border-radius:50%; display:grid; place-items:center; font-family:var(--serif); font-size:14px; letter-spacing:-.05em; background:rgba(14,44,97,.25); backdrop-filter:blur(12px); }
-    .date-chip { padding:7px 12px; border:1px solid rgba(255,255,255,.38); border-radius:999px; font-size:12px; letter-spacing:.1em; background:rgba(14,44,97,.25); backdrop-filter:blur(12px); }
+    .hero-label { color:rgba(255,255,255,.72); font-size:11px; letter-spacing:.16em; }
     .hero-copy { padding-top:230px; text-shadow:0 2px 22px rgba(0,20,55,.38); }
     .hero-copy>p { margin:0 0 10px; color:var(--gold-soft); font-size:12px; font-weight:750; letter-spacing:.22em; }
-    .hero-copy h1 { margin:0; font-family:var(--serif); font-size:clamp(40px,12vw,66px); font-weight:500; line-height:1.1; letter-spacing:-.06em; }
-    .hero-copy h1 span { display:block; margin:6px 0 0 1.25em; font-style:italic; }
-    .hero-info { margin-top:28px; padding-top:19px; border-top:1px solid rgba(255,255,255,.3); display:grid; grid-template-columns:1fr auto; align-items:end; gap:16px; }
+    .hero-title-row { display:grid; grid-template-columns:minmax(0,1fr) 106px; align-items:center; gap:10px; }
+    .hero-copy h1 { margin:0; font-family:var(--serif); font-size:clamp(38px,10.7vw,61px); font-weight:500; line-height:1.08; letter-spacing:-.06em; }
+    .hero-copy h1 span { display:block; margin:6px 0 0 .92em; font-style:italic; }
+    .date-art { position:relative; min-height:118px; padding:12px 4px 9px; border-top:1px solid rgba(244,223,159,.72); border-bottom:1px solid rgba(244,223,159,.72); display:flex; flex-direction:column; align-items:center; justify-content:center; color:var(--gold-soft); text-align:center; transform:rotate(-2deg); }
+    .date-art::before,.date-art::after { content:"✦"; position:absolute; color:#fff5d6; font-size:10px; }
+    .date-art::before { left:-2px; top:5px; }
+    .date-art::after { right:0; bottom:5px; }
+    .date-art small { font-size:9px; font-weight:800; letter-spacing:.17em; }
+    .date-art strong { display:block; margin:-2px 0; font-family:var(--serif); font-size:42px; font-weight:500; line-height:1; }
+    .date-art em { font-family:var(--serif); font-size:12px; font-style:italic; letter-spacing:.08em; }
+    .hero-info { margin-top:25px; padding-top:18px; border-top:1px solid rgba(255,255,255,.3); display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:14px; }
     .hero-info strong { display:block; font-family:var(--serif); font-size:19px; font-weight:500; }
     .hero-info small { color:rgba(255,255,255,.68); font-size:12px; }
-    .arrival { text-align:right; }
-    .home-content { position:relative; z-index:2; margin-top:-1px; padding:26px 18px 108px; border-radius:26px 26px 0 0; background:var(--sky); }
+    .arrival { min-width:86px; padding-left:15px; border-left:1px solid rgba(244,223,159,.48); display:grid; justify-items:end; color:#fff4d2; white-space:nowrap; }
+    .arrival strong { font-size:23px; line-height:1.05; }
+    .arrival span { margin-top:4px; color:rgba(255,244,210,.72); font-size:11px; letter-spacing:.08em; }
+    .home-content { position:relative; z-index:2; margin-top:-1px; padding:26px 18px 108px; border-radius:26px 26px 0 0; background:radial-gradient(circle at 92% 3%,rgba(201,155,61,.14),transparent 24%),linear-gradient(180deg,#fffaf0,#fbf3e4); }
     .welcome-line { margin:0 4px 20px; color:var(--muted); font-size:14px; }
     .feature-grid { display:grid; gap:12px; }
-    .feature-card { width:100%; min-height:116px; padding:22px; border:1px solid var(--line); border-radius:22px; display:grid; grid-template-columns:46px 1fr auto; align-items:center; gap:16px; text-align:left; background:white; box-shadow:0 10px 30px rgba(22,60,115,.07); cursor:pointer; transition:transform .16s ease; }
+    .feature-card { width:100%; min-height:116px; padding:21px; border:1px solid var(--line); border-radius:22px; display:grid; grid-template-columns:58px 1fr auto; align-items:center; gap:15px; text-align:left; background:rgba(255,254,250,.94); box-shadow:0 10px 30px rgba(103,72,24,.07); cursor:pointer; transition:transform .16s ease; }
     .feature-card:active { transform:scale(.985); }
-    .feature-card .icon { width:46px; height:46px; border-radius:15px; display:grid; place-items:center; color:var(--blue-900); background:var(--blue-100); }
+    .feature-card .icon { width:56px; height:56px; border:1px solid rgba(170,124,43,.25); border-radius:50%; display:grid; place-items:center; color:var(--gold-deep); background:linear-gradient(145deg,#fff9e9,#ecd49d); box-shadow:inset 0 0 0 4px rgba(255,255,255,.52); }
+    .feature-card .icon svg { width:31px; height:31px; stroke:currentColor; stroke-width:1.55; fill:none; stroke-linecap:round; stroke-linejoin:round; }
     .feature-card strong { display:block; font-family:var(--serif); font-size:20px; font-weight:650; }
     .feature-card small { display:block; margin-top:2px; color:var(--muted); font-size:12px; }
     .feature-card .arrow { color:var(--gold); font-size:24px; }
-    .page-head { position:sticky; z-index:10; top:0; padding:max(15px,env(safe-area-inset-top)) 18px 14px; display:grid; grid-template-columns:46px 1fr 46px; align-items:center; color:white; background:rgba(15,48,107,.94); backdrop-filter:blur(15px); }
+    .page-head { position:sticky; z-index:10; top:0; padding:max(15px,env(safe-area-inset-top)) 18px 14px; display:grid; grid-template-columns:46px 1fr 46px; align-items:center; color:#fff9e9; background:rgba(133,94,28,.95); backdrop-filter:blur(15px); }
     .page-head button { width:42px; height:42px; border:0; border-radius:50%; display:grid; place-items:center; color:white; background:rgba(255,255,255,.1); font-size:26px; cursor:pointer; }
     .page-head h1 { margin:0; text-align:center; font-family:var(--serif); font-size:19px; font-weight:600; letter-spacing:.03em; }
     .page-body { padding:28px 18px 110px; }
@@ -53,7 +64,7 @@
     .page-intro p { margin:10px 0 0; color:var(--muted); font-size:14px; }
     .segmented { margin-bottom:22px; padding:5px; display:grid; grid-template-columns:1fr 1fr; gap:5px; border:1px solid var(--line); border-radius:999px; background:white; }
     .segmented button { min-height:44px; border:0; border-radius:999px; color:var(--muted); background:transparent; font-weight:700; cursor:pointer; }
-    .segmented button.active { color:white; background:var(--blue-900); box-shadow:0 7px 18px rgba(21,58,117,.2); }
+    .segmented button.active { color:white; background:var(--gold); box-shadow:0 7px 18px rgba(142,98,23,.22); }
     .subview,.transport-panel,.schedule-panel { display:none; }
     .subview.active,.transport-panel.active,.schedule-panel.active { display:block; animation:rise .22s ease both; }
     .destination-card { padding:23px; border:1px solid rgba(201,155,61,.28); border-radius:22px; color:white; background:linear-gradient(140deg,var(--blue-950),var(--blue-700)); box-shadow:var(--shadow); }
@@ -69,7 +80,7 @@
     .transport-tabs { margin:24px 0 16px; display:flex; gap:8px; overflow-x:auto; scrollbar-width:none; }
     .transport-tabs::-webkit-scrollbar { display:none; }
     .transport-tabs button { flex:0 0 auto; padding:9px 14px; border:1px solid var(--line); border-radius:999px; color:var(--muted); background:white; font-size:13px; font-weight:700; cursor:pointer; }
-    .transport-tabs button.active { color:var(--blue-900); border-color:#94bce9; background:var(--blue-100); }
+    .transport-tabs button.active { color:var(--gold-deep); border-color:#d6b972; background:#fff6da; }
     .step-list { display:grid; gap:14px; }
     .step-card { overflow:hidden; border:1px solid var(--line); border-radius:20px; background:white; box-shadow:0 10px 28px rgba(18,55,110,.07); }
     .guide-shot { position:relative; height:190px; background-image:url("./assets/transport-guide.jpg"); background-repeat:no-repeat; background-size:100% auto; cursor:zoom-in; }
@@ -94,16 +105,20 @@
     .route-icon { width:38px; height:38px; border-radius:12px; display:grid; place-items:center; color:var(--blue-900); background:var(--blue-100); }
     .route-option strong { display:block; font-size:14px; }
     .route-option p { margin:3px 0 0; color:var(--muted); font-size:12px; }
-    .ceremony-hero { position:relative; overflow:hidden; padding:28px 20px; border-radius:24px; color:white; text-align:center; background:linear-gradient(150deg,#0e2d66,#2f70bd); box-shadow:var(--shadow); }
-    .ceremony-hero::before { content:"✦"; position:absolute; left:20px; top:13px; color:var(--gold-soft); font-size:28px; opacity:.75; }
-    .ceremony-hero::after { content:"✧"; position:absolute; right:18px; bottom:10px; color:white; font-size:42px; opacity:.25; }
-    .ceremony-hero .mini { color:var(--gold-soft); font-size:12px; font-weight:800; letter-spacing:.15em; }
-    .ceremony-hero h3 { margin:7px 0 20px; font-family:var(--serif); font-size:28px; font-weight:500; }
-    .countdown { display:grid; grid-template-columns:repeat(4,1fr); gap:7px; }
-    .countdown div { padding:14px 2px 11px; border:1px solid rgba(255,255,255,.16); border-radius:14px; background:rgba(255,255,255,.08); }
-    .countdown strong { display:block; font-family:var(--serif); font-size:27px; font-weight:500; line-height:1; font-variant-numeric:tabular-nums; }
-    .countdown span { color:rgba(255,255,255,.62); font-size:10px; }
-    .arrival-note { margin:16px 0 0; color:rgba(255,255,255,.72); font-size:13px; }
+    .ceremony-hero { position:relative; overflow:hidden; padding:27px 18px 18px; border:1px solid rgba(121,84,26,.22); border-radius:24px; color:var(--blue-950); text-align:left; background:linear-gradient(145deg,#fff9e7 0%,#f0d48f 58%,#d8ad55 100%); box-shadow:var(--shadow); }
+    .ceremony-hero::before { content:"✦"; position:absolute; left:16px; top:12px; color:#9b6d1e; font-size:23px; opacity:.68; }
+    .ceremony-hero::after { content:"✧"; position:absolute; right:13px; bottom:4px; color:#fff7db; font-size:44px; opacity:.6; }
+    .ceremony-sentence { margin:9px 0 3px; color:#6f5426; font-size:15px; font-weight:650; letter-spacing:.04em; text-align:center; }
+    .ceremony-hero h3 { margin:0 0 20px; font-family:var(--serif); font-size:clamp(25px,7.5vw,34px); font-weight:600; text-align:center; }
+    .countdown-label { margin:0 0 9px 2px; color:#76591f; font-size:14px; font-weight:750; letter-spacing:.05em; }
+    .countdown { display:grid; grid-template-columns:repeat(4,1fr); gap:7px; perspective:900px; }
+    .countdown div { position:relative; overflow:hidden; padding:15px 2px 11px; border:1px solid rgba(255,255,255,.45); border-radius:13px; color:#fffaf0; text-align:center; background:linear-gradient(180deg,#bb8a35 0 49%,#9a6c21 50% 100%); box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 8px 18px rgba(107,71,17,.16); transform-style:preserve-3d; }
+    .countdown div::after { content:""; position:absolute; left:0; right:0; top:50%; height:1px; background:rgba(76,46,7,.35); box-shadow:0 1px rgba(255,255,255,.12); }
+    .countdown div.flip { animation:flipCard .52s cubic-bezier(.35,.03,.26,1); }
+    @keyframes flipCard { 0%{transform:rotateX(0)} 46%{transform:rotateX(-84deg)} 54%{transform:rotateX(74deg)} 100%{transform:rotateX(0)} }
+    .countdown strong { position:relative; z-index:1; display:block; font-family:var(--serif); font-size:28px; font-weight:550; line-height:1; font-variant-numeric:tabular-nums; text-shadow:0 1px 1px rgba(65,39,5,.3); }
+    .countdown span { position:relative; z-index:1; color:rgba(255,255,255,.76); font-size:10px; }
+    .arrival-note { position:relative; z-index:1; margin:12px 4px 0; color:#6f5426; font-family:var(--serif); font-size:11px; font-style:italic; text-align:right; }
     .event-list { position:relative; margin:28px 0 0; padding:0; list-style:none; }
     .event-list::before { content:""; position:absolute; left:65px; top:10px; bottom:22px; width:1px; background:linear-gradient(var(--gold),rgba(201,155,61,.1)); }
     .event-list li { position:relative; min-height:83px; padding:0 0 25px 96px; }
@@ -120,7 +135,7 @@
     .tag-row { margin-top:8px; display:flex; flex-wrap:wrap; gap:5px; }
     .tag { padding:3px 7px; border:1px solid #d7b65a; border-radius:999px; color:#76560e; background:#fff8de; font-size:10px; font-weight:750; line-height:1.3; }
     .tag.photo { color:#155895; border-color:#9cc7ed; background:#edf7ff; }
-    .bottom-bar { position:fixed; z-index:25; left:50%; bottom:max(11px,env(safe-area-inset-bottom)); width:min(calc(100% - 24px),520px); padding:6px; border:1px solid rgba(255,255,255,.28); border-radius:999px; display:grid; grid-template-columns:repeat(3,1fr); transform:translateX(-50%); background:rgba(11,38,86,.9); box-shadow:0 16px 40px rgba(10,38,90,.26); backdrop-filter:blur(18px); }
+    .bottom-bar { position:fixed; z-index:25; left:50%; bottom:max(11px,env(safe-area-inset-bottom)); width:min(calc(100% - 24px),520px); padding:6px; border:1px solid rgba(255,255,255,.28); border-radius:999px; display:grid; grid-template-columns:repeat(3,1fr); transform:translateX(-50%); background:rgba(126,88,25,.92); box-shadow:0 16px 40px rgba(89,59,12,.25); backdrop-filter:blur(18px); }
     .bottom-bar button { min-height:44px; padding:0 4px; border:0; border-radius:999px; color:rgba(255,255,255,.62); background:transparent; font-size:12px; font-weight:700; cursor:pointer; }
     .bottom-bar button.active { color:var(--blue-950); background:white; }
     .toast { position:fixed; z-index:40; left:50%; bottom:82px; max-width:calc(100% - 36px); padding:10px 15px; border-radius:999px; transform:translate(-50%,10px); color:white; background:rgba(9,31,72,.92); font-size:12px; opacity:0; pointer-events:none; transition:.2s ease; }
@@ -137,18 +152,19 @@
   <div class="app">
     <section class="view active" data-view="home">
       <header class="home-hero">
-        <div class="hero-top"><div class="monogram">L · Z</div><div class="date-chip">2026.10.18</div></div>
+        <div class="hero-top"><div class="monogram">L · Z</div><div class="hero-label">WEDDING DAY</div></div>
         <div class="hero-copy">
-          <p>OUR FAIRYTALE WEDDING</p><h1>乐骏霖 <span>&amp; 张若妍</span></h1>
-          <div class="hero-info"><div><strong>上海迪士尼乐园酒店</strong><small>婚礼仪式 · 14:30</small></div><div class="arrival"><strong>14:00 前</strong><small>建议抵达</small></div></div>
+          <p>OUR FAIRYTALE WEDDING</p>
+          <div class="hero-title-row"><h1>乐骏霖 <span>&amp; 张若妍</span></h1><div class="date-art"><small>OCTOBER</small><strong>18</strong><em>2026</em></div></div>
+          <div class="hero-info"><div><strong>上海迪士尼乐园酒店</strong><small>婚礼仪式 · 14:30</small></div><div class="arrival"><strong>14:00</strong><span>前建议抵达</span></div></div>
         </div>
       </header>
       <div class="home-content">
         <p class="welcome-line">婚礼当天需要的信息，都整理在这里。</p>
         <div class="feature-grid">
-          <button class="feature-card" type="button" data-open="route"><span class="icon">⌖</span><span><strong>路线导航</strong><small>前往婚礼现场 · 仪式后进入乐园</small></span><span class="arrow">›</span></button>
-          <button class="feature-card" type="button" data-open="ceremony"><span class="icon">◷</span><span><strong>仪式时间</strong><small>开始倒计时 · 当日关键流程</small></span><span class="arrow">›</span></button>
-          <button class="feature-card" type="button" data-open="schedule"><span class="icon">✦</span><span><strong>新人营业时间表</strong><small>查看大致位置 · 推荐见面时段</small></span><span class="arrow">›</span></button>
+          <button class="feature-card" type="button" data-open="route"><span class="icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M8 24V13l4 3v-8l4 4 4-4v8l4-3v11"/><path d="M6 24h20M13 24v-5h6v5M10 10l2-3 2 3M18 10l2-3 2 3"/><path d="M5 28c5-2 17-2 22 0"/></svg></span><span><strong>路线导航</strong><small>前往婚礼现场 · 仪式后进入乐园</small></span><span class="arrow">›</span></button>
+          <button class="feature-card" type="button" data-open="ceremony"><span class="icon" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="17" r="9"/><path d="M16 12v6l4 2M12 5h8M16 5v3M8 8l2 2M24 8l-2 2"/><path d="M25 3l.7 2.1L28 6l-2.3.9L25 9l-.8-2.1L22 6l2.2-.9z"/></svg></span><span><strong>仪式时间</strong><small>开始倒计时 · 当日关键流程</small></span><span class="arrow">›</span></button>
+          <button class="feature-card" type="button" data-open="schedule"><span class="icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M6 9c4-1 7 0 10 3v15c-3-3-6-4-10-3zM26 9c-4-1-7 0-10 3v15c3-3 6-4 10-3z"/><path d="M22 3l.8 2.2L25 6l-2.2.8L22 9l-.8-2.2L19 6l2.2-.8zM8 3v3M6.5 4.5h3"/></svg></span><span><strong>新人营业时间表</strong><small>查看大致位置 · 推荐见面时段</small></span><span class="arrow">›</span></button>
         </div>
       </div>
     </section>
@@ -190,7 +206,7 @@
       <header class="page-head"><button type="button" data-back aria-label="返回首页">‹</button><h1>仪式时间</h1><span></span></header>
       <div class="page-body">
         <div class="page-intro"><p class="eyebrow">CEREMONY</p><h2>共同见证这一刻</h2><p>建议在 14:00 前抵达酒店，签到后请跟随现场工作人员引导。</p></div>
-        <article class="ceremony-hero"><span class="mini">距离仪式开始还有</span><h3>2026 年 10 月 18 日 · 14:30</h3><div class="countdown"><div><strong id="days">000</strong><span>天</span></div><div><strong id="hours">00</strong><span>小时</span></div><div><strong id="minutes">00</strong><span>分钟</span></div><div><strong id="seconds">00</strong><span>秒</span></div></div><p class="arrival-note">请预留交通和入场时间</p></article>
+        <article class="ceremony-hero"><p class="ceremony-sentence">仪式将会在</p><h3>2026 年 10 月 18 日 · 14:30 开始</h3><p class="countdown-label">距离仪式开始还有：</p><div class="countdown"><div><strong id="days">000</strong><span>天</span></div><div><strong id="hours">00</strong><span>小时</span></div><div><strong id="minutes">00</strong><span>分钟</span></div><div><strong id="seconds">00</strong><span>秒</span></div></div><p class="arrival-note">请预留交通和入场时间</p></article>
         <ol class="event-list"><li><time>13:30</time><i></i><strong>迎宾签到</strong><span>迎宾持续至 14:25，建议在 14:00 前抵达</span></li><li><time>14:25</time><i></i><strong>宾客入席</strong><span>请跟随现场工作人员引导</span></li><li><time>14:30</time><i></i><strong>婚礼仪式</strong><span>仪式预计于 15:00 结束</span></li><li><time>15:00</time><i></i><strong>鸡尾酒会及甜品台</strong><span>开放至 16:00</span></li><li><time>15:30</time><i></i><strong>神秘迪士尼朋友见面</strong><span>见面活动持续至 16:00</span></li></ol>
       </div>
     </section>
@@ -198,7 +214,7 @@
     <section class="view" data-view="schedule">
       <header class="page-head"><button type="button" data-back aria-label="返回首页">‹</button><h1>新人营业时间表</h1><span></span></header>
       <div class="page-body">
-        <div class="page-intro"><p class="eyebrow">MEET THE COUPLE</p><h2>今天在哪里见到我们</h2><p>查看新人当天的大致位置，带有小标签的时段更适合见面或合影。</p></div>
+        <div class="page-intro"><p class="eyebrow">MEET THE COUPLE</p><h2>今天在哪里见到我们</h2></div>
         <div class="segmented schedule-switch"><button type="button" class="active" data-schedule-tab="bride">新娘营业时间</button><button type="button" data-schedule-tab="groom">新郎营业时间</button></div>
         <div class="schedule-panel active" data-schedule-panel="bride">
           <article class="schedule-card"><time>06:00</time><h3>化妆造型</h3><p>宴会厅新娘化妆间 · 至 09:00</p></article>
@@ -233,7 +249,8 @@
     document.querySelectorAll('[data-open],[data-nav]').forEach(b=>b.addEventListener('click',()=>showView(b.dataset.open||b.dataset.nav)));document.querySelectorAll('[data-back]').forEach(b=>b.addEventListener('click',()=>showView('home')));window.addEventListener('popstate',()=>showView(location.hash.slice(1)||'home',false));
     function bindTabs(selector,panelAttr,key){document.querySelectorAll(selector).forEach(button=>button.addEventListener('click',()=>{button.parentElement.querySelectorAll('button').forEach(item=>item.classList.toggle('active',item===button));document.querySelectorAll(`[${panelAttr}]`).forEach(panel=>panel.classList.toggle('active',panel.getAttribute(panelAttr)===button.dataset[key]))}))}
     bindTabs('[data-route-tab]','data-route-panel','routeTab');bindTabs('[data-transport-tab]','data-transport-panel','transportTab');bindTabs('[data-schedule-tab]','data-schedule-panel','scheduleTab');
-    function updateCountdown(){const diff=Math.max(0,weddingDate.getTime()-Date.now()),pad=v=>String(v).padStart(2,'0');document.querySelector('#days').textContent=String(Math.floor(diff/86400000)).padStart(3,'0');document.querySelector('#hours').textContent=pad(Math.floor(diff/3600000)%24);document.querySelector('#minutes').textContent=pad(Math.floor(diff/60000)%60);document.querySelector('#seconds').textContent=pad(Math.floor(diff/1000)%60)}updateCountdown();setInterval(updateCountdown,1000);
+    function setClockValue(selector,value){const el=document.querySelector(selector);if(el.textContent===value)return;const card=el.parentElement;el.textContent=value;card.classList.remove('flip');void card.offsetWidth;card.classList.add('flip');setTimeout(()=>card.classList.remove('flip'),540)}
+    function updateCountdown(){const diff=Math.max(0,weddingDate.getTime()-Date.now()),pad=v=>String(v).padStart(2,'0');setClockValue('#days',String(Math.floor(diff/86400000)).padStart(3,'0'));setClockValue('#hours',pad(Math.floor(diff/3600000)%24));setClockValue('#minutes',pad(Math.floor(diff/60000)%60));setClockValue('#seconds',pad(Math.floor(diff/1000)%60))}updateCountdown();setInterval(updateCountdown,1000);
     let toastTimer;function toast(message){const el=document.querySelector('#toast');el.textContent=message;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),1900)}
     document.querySelector('#copyAddress').addEventListener('click',async()=>{try{await navigator.clipboard.writeText('上海市浦东新区申迪西路1009号 上海迪士尼乐园酒店');toast('地址已复制')}catch{toast('请长按地址复制')}});
     const lightbox=document.querySelector('#lightbox'),lightboxImage=document.querySelector('#lightboxImage');function openImage(src){lightboxImage.src=src;lightbox.classList.add('open');document.body.style.overflow='hidden'}function closeImage(){lightbox.classList.remove('open');document.body.style.overflow=''}
