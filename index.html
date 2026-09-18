@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#173d7a" />
+  <meta name="description" content="乐骏霖先生与张若妍女士的婚礼宾客指南：路线导航、仪式时间与新人营业时间表。" />
+  <title>乐骏霖 & 张若妍｜婚礼指南</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='17' fill='%23173d7a'/%3E%3Cpath d='M16 41h32v5H16zm5-3h22l-2-15-7 6-3-13-4 13-7-6z' fill='%23f2cf73'/%3E%3Ccircle cx='19' cy='20' r='3' fill='%23fff'/%3E%3Ccircle cx='45' cy='17' r='2' fill='%23fff'/%3E%3C/svg%3E" />
+  <style>
+    :root { --blue-950:#0d2855; --blue-900:#153a75; --blue-700:#2b67b5; --blue-100:#eaf4ff; --sky:#f4f9ff; --gold:#c99b3d; --gold-soft:#f4df9f; --ink:#1e3354; --muted:#6a7890; --line:rgba(43,103,181,.14); --shadow:0 18px 50px rgba(19,55,109,.12); --serif:"Songti SC","STSong","Noto Serif CJK SC",Georgia,serif; --sans:Inter,"PingFang SC","Microsoft YaHei",sans-serif; }
+    * { box-sizing:border-box; }
+    html { min-width:320px; background:#dfeeff; scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--sky); font-family:var(--sans); font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    button,a { -webkit-tap-highlight-color:transparent; }
+    button { color:inherit; font:inherit; }
+    a { color:inherit; text-decoration:none; }
+    img { max-width:100%; display:block; }
+    .app { width:min(100%,680px); min-height:100svh; margin:0 auto; overflow:hidden; background:var(--sky); }
+    .view { display:none; min-height:100svh; animation:rise .28s ease both; }
+    .view.active { display:block; }
+    @keyframes rise { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
+    .home-hero { position:relative; min-height:64svh; padding:max(18px,env(safe-area-inset-top)) 22px 36px; display:flex; flex-direction:column; justify-content:space-between; isolation:isolate; overflow:hidden; color:white; background:#122e61; }
+    .home-hero::before { content:""; position:absolute; inset:0; z-index:-2; background:url("./assets/transport-guide.jpg") center top/cover no-repeat; filter:saturate(.86) contrast(.96); }
+    .home-hero::after { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(180deg,rgba(8,25,57,.06),rgba(9,30,70,.16) 33%,rgba(8,32,74,.93) 52%,rgba(8,32,74,.99) 70%,#0d326e 100%); }
+    .hero-top { display:flex; align-items:center; justify-content:space-between; }
+    .monogram { width:44px; height:44px; border:1px solid rgba(255,255,255,.65); border-radius:50%; display:grid; place-items:center; font-family:var(--serif); font-size:14px; letter-spacing:-.05em; background:rgba(14,44,97,.25); backdrop-filter:blur(12px); }
+    .date-chip { padding:7px 12px; border:1px solid rgba(255,255,255,.38); border-radius:999px; font-size:12px; letter-spacing:.1em; background:rgba(14,44,97,.25); backdrop-filter:blur(12px); }
+    .hero-copy { padding-top:230px; text-shadow:0 2px 22px rgba(0,20,55,.38); }
+    .hero-copy>p { margin:0 0 10px; color:var(--gold-soft); font-size:12px; font-weight:750; letter-spacing:.22em; }
+    .hero-copy h1 { margin:0; font-family:var(--serif); font-size:clamp(40px,12vw,66px); font-weight:500; line-height:1.1; letter-spacing:-.06em; }
+    .hero-copy h1 span { display:block; margin:6px 0 0 1.25em; font-style:italic; }
+    .hero-info { margin-top:28px; padding-top:19px; border-top:1px solid rgba(255,255,255,.3); display:grid; grid-template-columns:1fr auto; align-items:end; gap:16px; }
+    .hero-info strong { display:block; font-family:var(--serif); font-size:19px; font-weight:500; }
+    .hero-info small { color:rgba(255,255,255,.68); font-size:12px; }
+    .arrival { text-align:right; }
+    .home-content { position:relative; z-index:2; margin-top:-1px; padding:26px 18px 108px; border-radius:26px 26px 0 0; background:var(--sky); }
+    .welcome-line { margin:0 4px 20px; color:var(--muted); font-size:14px; }
+    .feature-grid { display:grid; gap:12px; }
+    .feature-card { width:100%; min-height:116px; padding:22px; border:1px solid var(--line); border-radius:22px; display:grid; grid-template-columns:46px 1fr auto; align-items:center; gap:16px; text-align:left; background:white; box-shadow:0 10px 30px rgba(22,60,115,.07); cursor:pointer; transition:transform .16s ease; }
+    .feature-card:active { transform:scale(.985); }
+    .feature-card .icon { width:46px; height:46px; border-radius:15px; display:grid; place-items:center; color:var(--blue-900); background:var(--blue-100); }
+    .feature-card strong { display:block; font-family:var(--serif); font-size:20px; font-weight:650; }
+    .feature-card small { display:block; margin-top:2px; color:var(--muted); font-size:12px; }
+    .feature-card .arrow { color:var(--gold); font-size:24px; }
+    .page-head { position:sticky; z-index:10; top:0; padding:max(15px,env(safe-area-inset-top)) 18px 14px; display:grid; grid-template-columns:46px 1fr 46px; align-items:center; color:white; background:rgba(15,48,107,.94); backdrop-filter:blur(15px); }
+    .page-head button { width:42px; height:42px; border:0; border-radius:50%; display:grid; place-items:center; color:white; background:rgba(255,255,255,.1); font-size:26px; cursor:pointer; }
+    .page-head h1 { margin:0; text-align:center; font-family:var(--serif); font-size:19px; font-weight:600; letter-spacing:.03em; }
+    .page-body { padding:28px 18px 110px; }
+    .page-intro { margin:0 2px 24px; }
+    .page-intro .eyebrow { margin:0 0 7px; color:var(--gold); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    .page-intro h2 { margin:0; font-family:var(--serif); font-size:32px; font-weight:650; line-height:1.2; letter-spacing:-.035em; }
+    .page-intro p { margin:10px 0 0; color:var(--muted); font-size:14px; }
+    .segmented { margin-bottom:22px; padding:5px; display:grid; grid-template-columns:1fr 1fr; gap:5px; border:1px solid var(--line); border-radius:999px; background:white; }
+    .segmented button { min-height:44px; border:0; border-radius:999px; color:var(--muted); background:transparent; font-weight:700; cursor:pointer; }
+    .segmented button.active { color:white; background:var(--blue-900); box-shadow:0 7px 18px rgba(21,58,117,.2); }
+    .subview,.transport-panel,.schedule-panel { display:none; }
+    .subview.active,.transport-panel.active,.schedule-panel.active { display:block; animation:rise .22s ease both; }
+    .destination-card { padding:23px; border:1px solid rgba(201,155,61,.28); border-radius:22px; color:white; background:linear-gradient(140deg,var(--blue-950),var(--blue-700)); box-shadow:var(--shadow); }
+    .destination-card .mini { color:var(--gold-soft); font-size:12px; font-weight:750; letter-spacing:.1em; }
+    .destination-card h3 { margin:9px 0 3px; font-family:var(--serif); font-size:24px; font-weight:600; }
+    .destination-card p { margin:0; color:rgba(255,255,255,.7); font-size:13px; }
+    .action-row { margin-top:19px; display:grid; grid-template-columns:1fr auto; gap:9px; }
+    .btn { min-height:46px; padding:0 18px; border:1px solid transparent; border-radius:999px; display:inline-flex; align-items:center; justify-content:center; gap:7px; font-size:14px; font-weight:700; cursor:pointer; }
+    .btn-light { color:var(--blue-950); background:white; }
+    .btn-ghost { color:white; border-color:rgba(255,255,255,.28); background:rgba(255,255,255,.08); }
+    .notice { margin:14px 0 0; padding:14px 15px; border:1px solid #ead69a; border-radius:14px; color:#71581b; background:#fff8df; font-size:13px; }
+    .notice strong { display:block; color:#58420f; }
+    .transport-tabs { margin:24px 0 16px; display:flex; gap:8px; overflow-x:auto; scrollbar-width:none; }
+    .transport-tabs::-webkit-scrollbar { display:none; }
+    .transport-tabs button { flex:0 0 auto; padding:9px 14px; border:1px solid var(--line); border-radius:999px; color:var(--muted); background:white; font-size:13px; font-weight:700; cursor:pointer; }
+    .transport-tabs button.active { color:var(--blue-900); border-color:#94bce9; background:var(--blue-100); }
+    .step-list { display:grid; gap:14px; }
+    .step-card { overflow:hidden; border:1px solid var(--line); border-radius:20px; background:white; box-shadow:0 10px 28px rgba(18,55,110,.07); }
+    .guide-shot { position:relative; height:190px; background-image:url("./assets/transport-guide.jpg"); background-repeat:no-repeat; background-size:100% auto; cursor:zoom-in; }
+    .guide-shot.drive { background-position:center 22%; }
+    .guide-shot.metro { background-position:center 35%; }
+    .guide-shot.shuttle { background-position:center 47%; }
+    .guide-shot.bus { background-position:center 64%; }
+    .guide-shot.ferry { background-position:center 86%; }
+    .zoom-hint { position:absolute; right:10px; bottom:10px; padding:5px 8px; border-radius:999px; color:white; background:rgba(8,34,78,.78); font-size:11px; }
+    .step-copy { padding:17px; display:grid; grid-template-columns:30px 1fr; gap:11px; }
+    .step-number { width:28px; height:28px; border-radius:50%; display:grid; place-items:center; color:var(--blue-900); background:var(--gold-soft); font-size:12px; font-weight:800; }
+    .step-copy h4 { margin:1px 0 4px; font-size:15px; }
+    .step-copy p { margin:0; color:var(--muted); font-size:13px; }
+    .park-map { overflow:hidden; border:1px solid var(--line); border-radius:22px; background:white; box-shadow:var(--shadow); }
+    .park-map button { width:100%; padding:0; border:0; background:none; cursor:zoom-in; }
+    .park-map img { width:100%; }
+    .park-map-copy { padding:17px; border-top:1px solid var(--line); }
+    .park-map-copy strong { display:block; font-family:var(--serif); font-size:19px; }
+    .park-map-copy span { color:var(--muted); font-size:13px; }
+    .route-options { margin-top:14px; display:grid; gap:10px; }
+    .route-option { padding:17px; border:1px solid var(--line); border-radius:17px; display:grid; grid-template-columns:38px 1fr; gap:12px; background:white; }
+    .route-icon { width:38px; height:38px; border-radius:12px; display:grid; place-items:center; color:var(--blue-900); background:var(--blue-100); }
+    .route-option strong { display:block; font-size:14px; }
+    .route-option p { margin:3px 0 0; color:var(--muted); font-size:12px; }
+    .ceremony-hero { position:relative; overflow:hidden; padding:28px 20px; border-radius:24px; color:white; text-align:center; background:linear-gradient(150deg,#0e2d66,#2f70bd); box-shadow:var(--shadow); }
+    .ceremony-hero::before { content:"✦"; position:absolute; left:20px; top:13px; color:var(--gold-soft); font-size:28px; opacity:.75; }
+    .ceremony-hero::after { content:"✧"; position:absolute; right:18px; bottom:10px; color:white; font-size:42px; opacity:.25; }
+    .ceremony-hero .mini { color:var(--gold-soft); font-size:12px; font-weight:800; letter-spacing:.15em; }
+    .ceremony-hero h3 { margin:7px 0 20px; font-family:var(--serif); font-size:28px; font-weight:500; }
+    .countdown { display:grid; grid-template-columns:repeat(4,1fr); gap:7px; }
+    .countdown div { padding:14px 2px 11px; border:1px solid rgba(255,255,255,.16); border-radius:14px; background:rgba(255,255,255,.08); }
+    .countdown strong { display:block; font-family:var(--serif); font-size:27px; font-weight:500; line-height:1; font-variant-numeric:tabular-nums; }
+    .countdown span { color:rgba(255,255,255,.62); font-size:10px; }
+    .arrival-note { margin:16px 0 0; color:rgba(255,255,255,.72); font-size:13px; }
+    .event-list { position:relative; margin:28px 0 0; padding:0; list-style:none; }
+    .event-list::before { content:""; position:absolute; left:65px; top:10px; bottom:22px; width:1px; background:linear-gradient(var(--gold),rgba(201,155,61,.1)); }
+    .event-list li { position:relative; min-height:83px; padding:0 0 25px 96px; }
+    .event-list time { position:absolute; left:0; top:1px; color:var(--blue-900); font-family:var(--serif); font-size:16px; font-weight:700; }
+    .event-list i { position:absolute; left:59px; top:7px; width:13px; height:13px; border:3px solid var(--sky); border-radius:50%; background:var(--gold); box-shadow:0 0 0 1px var(--gold); }
+    .event-list strong { display:block; font-family:var(--serif); font-size:19px; font-weight:650; }
+    .event-list span { color:var(--muted); font-size:13px; }
+    .schedule-switch { margin-bottom:18px; }
+    .schedule-card { position:relative; padding:17px 16px 17px 74px; border:1px solid var(--line); border-radius:18px; background:white; box-shadow:0 8px 24px rgba(18,55,110,.055); }
+    .schedule-card+.schedule-card { margin-top:10px; }
+    .schedule-card time { position:absolute; left:15px; top:18px; color:var(--blue-900); font-family:var(--serif); font-size:15px; font-weight:700; }
+    .schedule-card h3 { margin:0; font-size:15px; }
+    .schedule-card p { margin:3px 0 0; color:var(--muted); font-size:12px; }
+    .tag-row { margin-top:8px; display:flex; flex-wrap:wrap; gap:5px; }
+    .tag { padding:3px 7px; border:1px solid #d7b65a; border-radius:999px; color:#76560e; background:#fff8de; font-size:10px; font-weight:750; line-height:1.3; }
+    .tag.photo { color:#155895; border-color:#9cc7ed; background:#edf7ff; }
+    .bottom-bar { position:fixed; z-index:25; left:50%; bottom:max(11px,env(safe-area-inset-bottom)); width:min(calc(100% - 24px),520px); padding:6px; border:1px solid rgba(255,255,255,.28); border-radius:999px; display:grid; grid-template-columns:repeat(3,1fr); transform:translateX(-50%); background:rgba(11,38,86,.9); box-shadow:0 16px 40px rgba(10,38,90,.26); backdrop-filter:blur(18px); }
+    .bottom-bar button { min-height:44px; padding:0 4px; border:0; border-radius:999px; color:rgba(255,255,255,.62); background:transparent; font-size:12px; font-weight:700; cursor:pointer; }
+    .bottom-bar button.active { color:var(--blue-950); background:white; }
+    .toast { position:fixed; z-index:40; left:50%; bottom:82px; max-width:calc(100% - 36px); padding:10px 15px; border-radius:999px; transform:translate(-50%,10px); color:white; background:rgba(9,31,72,.92); font-size:12px; opacity:0; pointer-events:none; transition:.2s ease; }
+    .toast.show { opacity:1; transform:translate(-50%,0); }
+    .lightbox { position:fixed; z-index:50; inset:0; padding:max(58px,env(safe-area-inset-top)) 12px max(24px,env(safe-area-inset-bottom)); display:none; align-items:center; justify-content:center; background:rgba(4,17,40,.93); }
+    .lightbox.open { display:flex; }
+    .lightbox img { max-width:100%; max-height:calc(100svh - 100px); border-radius:12px; object-fit:contain; }
+    .lightbox-close { position:absolute; top:max(12px,env(safe-area-inset-top)); right:14px; width:42px; height:42px; border:1px solid rgba(255,255,255,.25); border-radius:50%; color:white; background:rgba(255,255,255,.1); font-size:22px; cursor:pointer; }
+    @media (min-width:681px) { body{padding:24px 0}.app{min-height:calc(100svh - 48px);border-radius:30px;box-shadow:0 28px 90px rgba(25,69,129,.2)}.page-head{top:24px}.home-hero{min-height:760px;padding-left:34px;padding-right:34px}.home-content,.page-body{padding-left:30px;padding-right:30px} }
+    @media (prefers-reduced-motion:reduce) { html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important} }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <section class="view active" data-view="home">
+      <header class="home-hero">
+        <div class="hero-top"><div class="monogram">L · Z</div><div class="date-chip">2026.10.18</div></div>
+        <div class="hero-copy">
+          <p>OUR FAIRYTALE WEDDING</p><h1>乐骏霖 <span>&amp; 张若妍</span></h1>
+          <div class="hero-info"><div><strong>上海迪士尼乐园酒店</strong><small>婚礼仪式 · 14:30</small></div><div class="arrival"><strong>14:00 前</strong><small>建议抵达</small></div></div>
+        </div>
+      </header>
+      <div class="home-content">
+        <p class="welcome-line">婚礼当天需要的信息，都整理在这里。</p>
+        <div class="feature-grid">
+          <button class="feature-card" type="button" data-open="route"><span class="icon">⌖</span><span><strong>路线导航</strong><small>前往婚礼现场 · 仪式后进入乐园</small></span><span class="arrow">›</span></button>
+          <button class="feature-card" type="button" data-open="ceremony"><span class="icon">◷</span><span><strong>仪式时间</strong><small>开始倒计时 · 当日关键流程</small></span><span class="arrow">›</span></button>
+          <button class="feature-card" type="button" data-open="schedule"><span class="icon">✦</span><span><strong>新人营业时间表</strong><small>查看大致位置 · 推荐见面时段</small></span><span class="arrow">›</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="view" data-view="route">
+      <header class="page-head"><button type="button" data-back aria-label="返回首页">‹</button><h1>路线导航</h1><span></span></header>
+      <div class="page-body">
+        <div class="page-intro"><p class="eyebrow">ROUTE GUIDE</p><h2>从出发到抵达</h2><p>根据目的地查看路线，每一步都配有现场图片说明。</p></div>
+        <div class="segmented"><button type="button" class="active" data-route-tab="venue">婚礼现场</button><button type="button" data-route-tab="park">前往乐园</button></div>
+        <div class="subview active" data-route-panel="venue">
+          <article class="destination-card"><span class="mini">导航终点</span><h3>上海迪士尼乐园酒店正门</h3><p>上海市浦东新区申迪西路 1009 号</p><div class="action-row"><a class="btn btn-light" href="https://uri.amap.com/search?keyword=%E4%B8%8A%E6%B5%B7%E8%BF%AA%E5%A3%AB%E5%B0%BC%E4%B9%90%E5%9B%AD%E9%85%92%E5%BA%97" target="_blank" rel="noreferrer">打开地图导航 ↗</a><button class="btn btn-ghost" type="button" id="copyAddress">复制地址</button></div></article>
+          <div class="notice"><strong>抵达后怎么做？</strong>请向酒店工作人员出示婚礼请柬，工作人员会为你指引后续路线。</div>
+          <div class="transport-tabs"><button type="button" class="active" data-transport-tab="drive">自驾或打车</button><button type="button" data-transport-tab="transit">公共交通</button></div>
+          <div class="transport-panel active" data-transport-panel="drive">
+            <div class="step-list">
+              <article class="step-card"><div class="guide-shot drive" data-zoom="./assets/transport-guide.jpg" role="button" tabindex="0" aria-label="放大查看自驾路线参考图"><span class="zoom-hint">点击查看原图</span></div><div class="step-copy"><span class="step-number">1</span><div><h4>导航至酒店正门</h4><p>从度假区西入口进入，在迪士尼大道环岛选择上海迪士尼乐园酒店出口。</p></div></div></article>
+              <article class="step-card"><div class="step-copy"><span class="step-number">2</span><div><h4>向工作人员出示请柬</h4><p>抵达酒店正门后，说明参加婚礼并出示婚礼请柬。</p></div></div></article>
+            </div>
+          </div>
+          <div class="transport-panel" data-transport-panel="transit">
+            <div class="step-list">
+              <article class="step-card"><div class="guide-shot metro" data-zoom="./assets/transport-guide.jpg" role="button" tabindex="0"><span class="zoom-hint">点击查看原图</span></div><div class="step-copy"><span class="step-number">1</span><div><h4>地铁 11 号线至迪士尼站</h4><p>终点站下车，从 4 号口出站，前往奇妙路接驳站。</p></div></div></article>
+              <article class="step-card"><div class="guide-shot shuttle" data-zoom="./assets/transport-guide.jpg" role="button" tabindex="0"><span class="zoom-hint">点击查看原图</span></div><div class="step-copy"><span class="step-number">2</span><div><h4>路线一 · 酒店免费穿梭巴士</h4><p>婚礼宾客可以免费乘坐。车辆等候、行车及步行时间约 20–25 分钟。</p></div></div></article>
+              <article class="step-card"><div class="guide-shot bus" data-zoom="./assets/transport-guide.jpg" role="button" tabindex="0"><span class="zoom-hint">点击查看原图</span></div><div class="step-copy"><span class="step-number">3</span><div><h4>路线二 · 国际旅游度假区 1 路</h4><p>公共交通、付费乘坐，在迪士尼乐园酒店站下车。全程约 20–25 分钟。</p></div></div></article>
+              <article class="step-card"><div class="guide-shot ferry" data-zoom="./assets/transport-guide.jpg" role="button" tabindex="0"><span class="zoom-hint">点击查看原图</span></div><div class="step-copy"><span class="step-number">4</span><div><h4>路线三 · 星愿湖轮渡</h4><p>约每 20 分钟一班，轮渡等候、航行及步行时间约 35–40 分钟。</p></div></div></article>
+            </div>
+            <div class="notice"><strong>轮渡运营提示</strong>星愿湖轮渡可能因极端天气暂停运营，请以当天现场信息为准。</div>
+          </div>
+        </div>
+        <div class="subview" data-route-panel="park">
+          <article class="park-map"><button type="button" data-zoom="./assets/resort-map.png"><img src="./assets/resort-map.png" alt="上海迪士尼度假区地图，标注酒店、乐园入口、穿梭巴士和轮渡位置" /></button><div class="park-map-copy"><strong>仪式结束后前往乐园</strong><span>点击地图可放大查看完整路径。</span></div></article>
+          <div class="route-options"><article class="route-option"><span class="route-icon">▰</span><div><strong>酒店穿梭巴士</strong><p>在酒店接驳点乘车，前往迪士尼交通枢纽，再步行至乐园主入口。</p></div></article><article class="route-option"><span class="route-icon">≈</span><div><strong>星愿湖轮渡</strong><p>从酒店码头乘船至星愿湖另一侧，再步行前往乐园入口。</p></div></article></div>
+          <div class="notice"><strong>入园前请确认</strong>请自行准备有效乐园门票或入园凭证。路线及开放情况以当天现场运营为准；轮渡可能因极端天气暂停。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view" data-view="ceremony">
+      <header class="page-head"><button type="button" data-back aria-label="返回首页">‹</button><h1>仪式时间</h1><span></span></header>
+      <div class="page-body">
+        <div class="page-intro"><p class="eyebrow">CEREMONY</p><h2>共同见证这一刻</h2><p>建议在 14:00 前抵达酒店，签到后请跟随现场工作人员引导。</p></div>
+        <article class="ceremony-hero"><span class="mini">距离仪式开始还有</span><h3>2026 年 10 月 18 日 · 14:30</h3><div class="countdown"><div><strong id="days">000</strong><span>天</span></div><div><strong id="hours">00</strong><span>小时</span></div><div><strong id="minutes">00</strong><span>分钟</span></div><div><strong id="seconds">00</strong><span>秒</span></div></div><p class="arrival-note">请预留交通和入场时间</p></article>
+        <ol class="event-list"><li><time>13:30</time><i></i><strong>迎宾签到</strong><span>迎宾持续至 14:25，建议在 14:00 前抵达</span></li><li><time>14:25</time><i></i><strong>宾客入席</strong><span>请跟随现场工作人员引导</span></li><li><time>14:30</time><i></i><strong>婚礼仪式</strong><span>仪式预计于 15:00 结束</span></li><li><time>15:00</time><i></i><strong>鸡尾酒会及甜品台</strong><span>开放至 16:00</span></li><li><time>15:30</time><i></i><strong>神秘迪士尼朋友见面</strong><span>见面活动持续至 16:00</span></li></ol>
+      </div>
+    </section>
+
+    <section class="view" data-view="schedule">
+      <header class="page-head"><button type="button" data-back aria-label="返回首页">‹</button><h1>新人营业时间表</h1><span></span></header>
+      <div class="page-body">
+        <div class="page-intro"><p class="eyebrow">MEET THE COUPLE</p><h2>今天在哪里见到我们</h2><p>查看新人当天的大致位置，带有小标签的时段更适合见面或合影。</p></div>
+        <div class="segmented schedule-switch"><button type="button" class="active" data-schedule-tab="bride">新娘营业时间</button><button type="button" data-schedule-tab="groom">新郎营业时间</button></div>
+        <div class="schedule-panel active" data-schedule-panel="bride">
+          <article class="schedule-card"><time>06:00</time><h3>化妆造型</h3><p>宴会厅新娘化妆间 · 至 09:00</p></article>
+          <article class="schedule-card"><time>09:00</time><h3>酒店外拍</h3><p>上海迪士尼乐园酒店户外区域 · 至 12:00</p><div class="tag-row"><span class="tag photo">可以合影</span></div></article>
+          <article class="schedule-card"><time>12:00</time><h3>婚礼彩排</h3><p>婚礼场地 · 至 12:30</p></article>
+          <article class="schedule-card"><time>12:30</time><h3>午休、补妆</h3><p>宴会厅新娘化妆间 · 至 13:30</p></article>
+          <article class="schedule-card"><time>13:30</time><h3>迎宾、合影</h3><p>婚礼场地 · 至 14:00</p><div class="tag-row"><span class="tag">适合见面</span><span class="tag photo">可以合影</span></div></article>
+          <article class="schedule-card"><time>14:00</time><h3>化妆造型</h3><p>宴会厅新娘化妆间 · 至 14:30</p></article>
+          <article class="schedule-card"><time>14:30</time><h3>婚礼仪式</h3><p>婚礼场地 · 至 15:00</p></article>
+          <article class="schedule-card"><time>15:00</time><h3>鸡尾酒会及甜品台</h3><p>宾客互动 · 至 16:00</p><div class="tag-row"><span class="tag">适合见面</span></div></article>
+          <article class="schedule-card"><time>15:30</time><h3>神秘迪士尼朋友见面</h3><p>鸡尾酒会甜品台 · 至 16:00</p><div class="tag-row"><span class="tag photo">可以合影</span></div></article>
+        </div>
+        <div class="schedule-panel" data-schedule-panel="groom">
+          <article class="schedule-card"><time>09:00</time><h3>酒店外拍</h3><p>上海迪士尼乐园酒店户外区域 · 至 12:00</p><div class="tag-row"><span class="tag photo">可以合影</span></div></article>
+          <article class="schedule-card"><time>12:00</time><h3>婚礼彩排</h3><p>婚礼场地 · 至 12:30</p></article>
+          <article class="schedule-card"><time>12:30</time><h3>午餐、休息</h3><p>酒店区域 · 至 13:30</p></article>
+          <article class="schedule-card"><time>13:30</time><h3>迎宾、合影</h3><p>婚礼场地 · 至 14:00</p><div class="tag-row"><span class="tag">适合见面</span><span class="tag photo">可以合影</span></div></article>
+          <article class="schedule-card"><time>14:00</time><h3>仪式前准备</h3><p>婚礼场地 · 至 14:30</p></article>
+          <article class="schedule-card"><time>14:30</time><h3>婚礼仪式</h3><p>婚礼场地 · 至 15:00</p></article>
+          <article class="schedule-card"><time>15:00</time><h3>鸡尾酒会及甜品台</h3><p>宾客互动 · 至 16:00</p><div class="tag-row"><span class="tag">适合见面</span></div></article>
+          <article class="schedule-card"><time>15:30</time><h3>神秘迪士尼朋友见面</h3><p>鸡尾酒会甜品台 · 至 16:00</p><div class="tag-row"><span class="tag photo">可以合影</span></div></article>
+        </div>
+      </div>
+    </section>
+  </div>
+  <nav class="bottom-bar" id="bottomBar" aria-label="主要功能"><button type="button" data-nav="route">路线导航</button><button type="button" data-nav="ceremony">仪式时间</button><button type="button" data-nav="schedule">新人时间</button></nav>
+  <div class="toast" id="toast" role="status"></div>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="图片预览"><button class="lightbox-close" type="button" aria-label="关闭图片">×</button><img id="lightboxImage" alt="放大的路线参考图片" /></div>
+  <script>
+    const views=[...document.querySelectorAll('.view')],navButtons=[...document.querySelectorAll('[data-nav]')],bottomBar=document.querySelector('#bottomBar'),weddingDate=new Date('2026-10-18T14:30:00+08:00');
+    function showView(name,push=true){views.forEach(v=>v.classList.toggle('active',v.dataset.view===name));navButtons.forEach(b=>b.classList.toggle('active',b.dataset.nav===name));bottomBar.style.display=name==='home'?'none':'grid';window.scrollTo({top:0,behavior:'instant'});if(push)history.pushState({view:name},'',name==='home'?location.pathname:`#${name}`)}
+    document.querySelectorAll('[data-open],[data-nav]').forEach(b=>b.addEventListener('click',()=>showView(b.dataset.open||b.dataset.nav)));document.querySelectorAll('[data-back]').forEach(b=>b.addEventListener('click',()=>showView('home')));window.addEventListener('popstate',()=>showView(location.hash.slice(1)||'home',false));
+    function bindTabs(selector,panelAttr,key){document.querySelectorAll(selector).forEach(button=>button.addEventListener('click',()=>{button.parentElement.querySelectorAll('button').forEach(item=>item.classList.toggle('active',item===button));document.querySelectorAll(`[${panelAttr}]`).forEach(panel=>panel.classList.toggle('active',panel.getAttribute(panelAttr)===button.dataset[key]))}))}
+    bindTabs('[data-route-tab]','data-route-panel','routeTab');bindTabs('[data-transport-tab]','data-transport-panel','transportTab');bindTabs('[data-schedule-tab]','data-schedule-panel','scheduleTab');
+    function updateCountdown(){const diff=Math.max(0,weddingDate.getTime()-Date.now()),pad=v=>String(v).padStart(2,'0');document.querySelector('#days').textContent=String(Math.floor(diff/86400000)).padStart(3,'0');document.querySelector('#hours').textContent=pad(Math.floor(diff/3600000)%24);document.querySelector('#minutes').textContent=pad(Math.floor(diff/60000)%60);document.querySelector('#seconds').textContent=pad(Math.floor(diff/1000)%60)}updateCountdown();setInterval(updateCountdown,1000);
+    let toastTimer;function toast(message){const el=document.querySelector('#toast');el.textContent=message;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),1900)}
+    document.querySelector('#copyAddress').addEventListener('click',async()=>{try{await navigator.clipboard.writeText('上海市浦东新区申迪西路1009号 上海迪士尼乐园酒店');toast('地址已复制')}catch{toast('请长按地址复制')}});
+    const lightbox=document.querySelector('#lightbox'),lightboxImage=document.querySelector('#lightboxImage');function openImage(src){lightboxImage.src=src;lightbox.classList.add('open');document.body.style.overflow='hidden'}function closeImage(){lightbox.classList.remove('open');document.body.style.overflow=''}
+    document.querySelectorAll('[data-zoom]').forEach(el=>{el.addEventListener('click',()=>openImage(el.dataset.zoom));el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')openImage(el.dataset.zoom)})});document.querySelector('.lightbox-close').addEventListener('click',closeImage);lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeImage()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeImage()});showView(location.hash.slice(1)||'home',false);
+  </script>
+</body>
+</html>
